@@ -1,0 +1,163 @@
+﻿@model ArticleVM
+
+
+    <!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>@Model.Organic.Title</p>
+						<h1>@Model.Organic.Description</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+	
+	<!-- single article section -->
+	<div class="mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="single-article-section">
+						<div class="single-article-text">
+							<div class="single-artcile-bg"></div>
+							<p class="blog-meta">
+								<span class="author"><i class="fas fa-user"></i> @Model.NewSingle.User.UserName</span>
+								<span class="date"><i class="fas fa-calendar"></i> @Model.NewSingle.PublishDate.ToString("dd MM yyyy")</span>
+							</p>
+							<h2>@Model.NewSingle.Title</h2>
+							<p>@Model.NewSingle.Description</p>
+						</div>
+						@{
+                           var count = 0;
+                         }
+						<div class="comments-list-wrap">
+							<h3 class="comment-count-title">@ViewBag.Comments Comments</h3>
+							<div class="comment-list">
+								@foreach (var item in Model.Comments)
+								{
+									count++;
+									<div class="single-comment-body">
+										<div class="comment-user-avater">
+											<img src="assets/img/avaters/avatar1.png" alt="">
+										</div>
+										<div class="comment-text-body">
+											<h4>@item.Name <span class="comment-date">@item.PublishDate.ToString("dd MM yyyy")</span></h4>
+											<p>@item.CommentText</p>
+										</div>
+									</div>
+								}
+								@if(count == 0)
+                                {
+                                   <h6>Heleki comment yoxdu ilk comment yazan sen ol. </h6>
+                                }
+							</div>
+						</div>
+						<div class="comment-template">
+							<h4>Leave a comment</h4>
+							<p>If you have a comment dont feel hesitate to send us your opinion.</p>
+							<form id="commentForm" asp-action="AddNewComment">
+								<p>
+									<input asp-for="Comment.Name" type="text" placeholder="Your Name">
+									<input asp-for="Comment.Email" type="email" placeholder="Your Email">
+								</p>
+								<p><textarea asp-for="Comment.CommentText" placeholder="Your Message"></textarea></p>
+								<button id="submitButton" type="submit" class="btn btn-primary">Submit Comment</button>
+								<input type="hidden" name="newId" value="@Model.NewSingle.Id" />
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="sidebar-section">
+						<div class="recent-posts">
+							<h4>Recent Posts</h4>
+							<ul>
+								@foreach (var item in Model.News)
+							   {
+								   <li><a href="/article/index/@item.Id">@item.Title</a></li>
+							   }
+								
+								
+							</ul>
+						</div>
+						<div class="archive-posts">
+							<h4>Archive Posts</h4>
+							<ul>
+								@foreach (var item in Model.News)
+								{
+									<li><a href="/article/index/@item.Id">@item.PublishDate.ToString("dd MM yyyy")</a></li>
+								}
+								
+								
+							</ul>
+						</div>
+						<div class="tag-section">
+							<h4>Tags</h4>
+							<ul>
+								<li><a href="single-news.html">Apple</a></li>
+								<li><a href="single-news.html">Strawberry</a></li>
+								<li><a href="single-news.html">BErry</a></li>
+								<li><a href="single-news.html">Orange</a></li>
+								<li><a href="single-news.html">Lemon</a></li>
+								<li><a href="single-news.html">Banana</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end single article section -->
+
+	<!-- logo carousel -->
+	<div class="logo-carousel-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo-carousel-inner">
+						@foreach (var item in Model.Photos)
+						{
+							<div class="single-logo-item">
+								<img src="@item.PhotoURL" alt="">
+							</div>
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end logo carousel -->
+
+
+	 @section Scripts{
+            <script>
+                var form = document.getElementById("commentForm")
+                var button = document.getElementById("submitButton")
+
+
+                button.addEventListener('click', function(e){
+                    e.preventDefault()
+
+                     var data = $("#commentForm").serialize();
+
+
+                    $.ajax({
+                        type: "POST",
+                        url: "@Url.Action("AddNewComment")",
+                        data: data,
+                        dataType: "json",
+                        success: function(msg) {
+                            console.log(msg);
+                        },
+                        error: function(req, status, error){
+                            console.log(msg);
+                            alert("Xeta bas verdi.")
+                        }
+                    });
+                })
+            </script>
+     }

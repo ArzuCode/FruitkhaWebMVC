@@ -1,0 +1,24 @@
+C:\Users\User\OneDrive\İş masası\K205\Back\Fruitkhhaa\Helper\bin\Debug\net6.0\Helper.deps.json
+C:\Users\User\OneDrive\İş masası\K205\Back\Fruitkhhaa\Helper\bin\Debug\net6.0\Helper.dll
+C:\Users\User\OneDrive\İş masası\K205\Back\Fruitkhhaa\Helper\bin\Debug\net6.0\ref\Helper.dll
+C:\Users\User\OneDrive\İş masası\K205\Back\Fruitkhhaa\Helper\bin\Debug\net6.0\Helper.pdb
+C:\Users\User\OneDrive\İş masası\K205\Back\Fruitkhhaa\Helper\obj\Debug\net6.0\Helper.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\İş masası\K205\Back\Fruitkhhaa\Helper\obj\Debug\net6.0\Helper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\OneDrive\İş masası\K205\Back\Fruitkhhaa\Helper\obj\Debug\net6.0\Helper.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive\İş masası\K205\Back\Fruitkhhaa\Helper\obj\Debug\net6.0\Helper.AssemblyInfo.cs
+C:\Users\User\OneDrive\İş masası\K205\Back\Fruitkhhaa\Helper\obj\Debug\net6.0\Helper.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\İş masası\K205\Back\Fruitkhhaa\Helper\obj\Debug\net6.0\Helper.dll
+C:\Users\User\OneDrive\İş masası\K205\Back\Fruitkhhaa\Helper\obj\Debug\net6.0\ref\Helper.dll
+C:\Users\User\OneDrive\İş masası\K205\Back\Fruitkhhaa\Helper\obj\Debug\net6.0\Helper.pdb
+C:\Users\user\Desktop\Fruitkha\Helper\bin\Debug\net6.0\Helper.deps.json
+C:\Users\user\Desktop\Fruitkha\Helper\bin\Debug\net6.0\Helper.dll
+C:\Users\user\Desktop\Fruitkha\Helper\bin\Debug\net6.0\Helper.pdb
+C:\Users\user\Desktop\Fruitkha\Helper\obj\Debug\net6.0\Helper.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Fruitkha\Helper\obj\Debug\net6.0\Helper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Fruitkha\Helper\obj\Debug\net6.0\Helper.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Fruitkha\Helper\obj\Debug\net6.0\Helper.AssemblyInfo.cs
+C:\Users\user\Desktop\Fruitkha\Helper\obj\Debug\net6.0\Helper.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Fruitkha\Helper\obj\Debug\net6.0\Helper.dll
+C:\Users\user\Desktop\Fruitkha\Helper\obj\Debug\net6.0\refint\Helper.dll
+C:\Users\user\Desktop\Fruitkha\Helper\obj\Debug\net6.0\Helper.pdb
+C:\Users\user\Desktop\Fruitkha\Helper\obj\Debug\net6.0\ref\Helper.dll
